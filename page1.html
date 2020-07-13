@@ -6,6 +6,11 @@
 <hr />
 <h1 class="header" align="center">Order</h1>
 
+<input type="text" placeholder="board type" id="board type"><br></br>
+<input type="radio" name="trucks" id="trucks"> No trucks<br></br>
+<input type="radio" name="trucks" id="notrucks"> trucks<br></br>
+<button onclick="board()">Submit</button>
+
 <body>
   <style>
     .header
@@ -56,3 +61,22 @@
       background: #00ffcc;
     }
 </style>
+  
+  <script>
+var sum = 0;
+function board()
+{
+if (document.getElementById('board type').value.indexOf("narly") > -1)
+{
+var boardType = 5;
+}
+else{var boardType = 0}
+if(document.getElementById("trucks").checked)
+{
+var trucks = 5;
+}
+else{var trucks = 0}
+sum = boardType + trucks;
+alert(sum);
+}
+</script>
